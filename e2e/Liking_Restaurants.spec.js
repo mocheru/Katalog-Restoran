@@ -91,4 +91,11 @@ Scenario('unliking one restaurant', async ({ I }) => {
     const likedRestoName = await I.grabTextFrom('.restaurant__name');
 
     assert.strictEqual(firstRestoName, likedRestoName);
+    
+    I.click(firstResto)
+    I.seeElement('#likeButton')
+    I.click('#likeButton')
+
+    I.amOnPage('/#/favorite')
+    I.dontSeeElement('.restaurant-item')
 });
