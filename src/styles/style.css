@@ -136,6 +136,10 @@ main {
     display: block;
     border-bottom: 1px solid #ff8000;
 }
+.search_tab{
+    min-width: 44px;
+    min-height: 44px;
+}
    
 /* restaurants */
    
